@@ -27,13 +27,25 @@ export default function Caraousel() {
           </div>
 
           <div className="carousel-item active">
-            <img src="..." className="d-block w-100" alt="..." />
+            <img
+              src="https://source.unsplash.com/random/900×700/?burger"
+              className="d-block w-100"
+              alt="..."
+            />
           </div>
           <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+            <img
+              src="https://source.unsplash.com/random/900×700/?pastry"
+              className="d-block w-100"
+              alt="..."
+            />
           </div>
           <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+            <img
+              src="https://source.unsplash.com/random/900×700/?coffee"
+              className="d-block w-100"
+              alt="..."
+            />
           </div>
         </div>
         <button
