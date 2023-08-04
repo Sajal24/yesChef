@@ -7,8 +7,9 @@ export default function Caraousel() {
         id="carouselExampleFade"
         className="carousel slide carousel-fade"
         data-bs-ride="carousel"
+        style={{ objectFit: "contain !important" }}
       >
-        <div className="carousel-inner">
+        <div className="carousel-inner" id="caraousel">
           <div className="carousel-caption" style={{ zIndex: "10" }}>
             <form className="d-flex">
               <input
@@ -31,6 +32,7 @@ export default function Caraousel() {
               src="https://source.unsplash.com/random/900×700/?burger"
               className="d-block w-100"
               alt="..."
+              style={{ filter: "brightness(40%)" }}
             />
           </div>
           <div className="carousel-item">
@@ -38,6 +40,7 @@ export default function Caraousel() {
               src="https://source.unsplash.com/random/900×700/?pastry"
               className="d-block w-100"
               alt="..."
+              style={{ filter: "brightness(40%)" }}
             />
           </div>
           <div className="carousel-item">
@@ -45,6 +48,7 @@ export default function Caraousel() {
               src="https://source.unsplash.com/random/900×700/?coffee"
               className="d-block w-100"
               alt="..."
+              style={{ filter: "brightness(40%)" }}
             />
           </div>
         </div>
