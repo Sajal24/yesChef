@@ -1,9 +1,17 @@
 const mongoose = require("mongoose");
 const mongoURI =
-  "mongodb://yesChefProject:yesyesyes@ac-00moskh-shard-00-00.8e71yf5.mongodb.net:27017,ac-00moskh-shard-00-01.8e71yf5.mongodb.net:27017,ac-00moskh-shard-00-02.8e71yf5.mongodb.net:27017/?ssl=true&replicaSet=atlas-zkijqd-shard-0&authSource=admin&retryWrites=true&w=majority";
+  "mongodb+srv://yesChefProject:yesyesyes@cluster0.8e71yf5.mongodb.net/yesChefProject?retryWrites=true&w=majority";
+
 const connectToMongo = async () => {
-  await mongoose.connect(mongoURI);
-  console.log("connected");
+  try {
+    await mongoose.connect(mongoURI);
+    console.log("Connected!");
+    let fetched_data = mongoose.connection.db.collection("food_items");
+    let data = await fetched_data.find({}).toArray();
+    console.log(data);
+  } catch (error) {
+    console.log("err: ", error);
+  }
 };
 
 module.exports = connectToMongo;
