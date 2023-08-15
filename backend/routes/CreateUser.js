@@ -24,10 +24,10 @@ router.post(
         email: req.body.email,
         location: req.body.location,
       });
-      res.send({ success: true });
+      res.json({ success: true });
     } catch (err) {
       console.log(err);
-      res.send({ success: false });
+      res.json({ success: false });
     }
   }
 );
